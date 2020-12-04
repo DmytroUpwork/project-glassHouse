@@ -1,0 +1,119 @@
+@font-face 
+  font-family: 'Roboto-Regular'
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+@font-face 
+  font-family: 'Roboto-Light'
+  src: url('../fonts/Roboto-Light.ttf') format('truetype')
+  font-weight: 300
+  font-style: normal
+
+
+=flex-align-center
+  display: flex
+  align-items: center
+=flex-space-between 
+  display: flex
+  justify-content: space-between
+
+
+
+body 
+  font-family: 'Roboto-Regular', sans-serif
+section.home 
+  background: radial-gradient(50% 50% at 50% 50%, #424E6C 0%, #171F33 100%)
+  color: #fff
+  padding: 58px 0 63px
+.container 
+  max-width: 1180px
+  margin: 0 auto
+
+.navbar 
+  display: flex
+  
+  // .navbar__button
+    
+  &__button
+    width: 60px
+    height: 57px
+    display: block   
+    position: relative
+    margin-right: 33px  
+    cursor: pointer  
+    &:before
+      content: ''
+      position: absolute 
+      width: 100%
+      height: 100%
+      background: #404C69
+      opacity: 0.21     
+    &_line 
+      width: 26px
+      height: 3px
+      background: #FFCB12
+      display: block
+      position: absolute
+      top: 46%
+      left: 0
+      right: 0
+      margin: 0 auto
+      &:before,
+      &:after 
+        content: ''
+        width: 26px
+        height: 3px
+        background: #FFCB12
+        display: block
+        position: absolute          
+        left: 0
+        right: 0
+        margin: 0 auto
+      &:before 
+        top: 9px
+      &:after 
+        top: -9px
+
+
+  // .navbar__logo
+
+  &__logo 
+    margin-right: 26px
+    +flex-align-center
+    cursor: pointer
+  
+
+  // .navbar__nav
+
+  &__nav 
+    +flex-space-between
+    align-items: center
+    width: 100%
+
+    &_adress
+      font-family: 'Roboto-Light', sans-serif
+
+
+
+    // .navbar__nav_call
+    
+
+    &_call 
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      div:first-child 
+        +flex-align-center
+        margin-bottom: 3px
+        img 
+          margin-right: 10px
+        span 
+          font-weight: bold
+          font-size: 21px
+      div:last-child 
+        border-bottom: 1px solid #FFCB12
+        color: #FFCB12
+        cursor: pointer
+			
+		
+
